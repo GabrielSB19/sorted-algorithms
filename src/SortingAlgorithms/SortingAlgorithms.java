@@ -24,7 +24,13 @@ public class SortingAlgorithms {
 		}
 		
 		for(int i = 0; i<childAgeString.length; i++) {
-			bw.write(bubbleSort(stringToDouble(childAgeString[i])));
+			if(i != childAgeString.length-1) {
+				bw.write(bubbleSort(stringToDouble(childAgeString[i]))+"\n");
+			} else {
+				bw.write(bubbleSort(stringToDouble(childAgeString[i])));
+			}
+			
+			
 		}
 
 		br.close();
@@ -71,7 +77,7 @@ public class SortingAlgorithms {
 			 average = count/(nums.length-1);
 		}
 		double averagefinal = Math.floor(average*100)/100;
-		return averagefinal+"-"+test+"\n";
+		return averagefinal+"-"+test;
 	}
 }
 
